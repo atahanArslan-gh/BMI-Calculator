@@ -16,6 +16,7 @@ weight_label.place(x=(window.winfo_width()/2)-(weight_label.winfo_reqwidth()/2),
 weight_entry = tkinter.Entry(width=20)
 weight_entry.place(x=(window.winfo_width()/2) - (weight_entry.winfo_reqwidth()/2),
                    y=(window.winfo_height())/2*0.5)
+weight_entry.focus()
 
 #height label
 height_label = tkinter.Label(text='Enter Your Height (cm)', bg='snow3', font=('Arial', 15, 'roman'))
