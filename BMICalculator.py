@@ -1,7 +1,8 @@
 import tkinter
+import customtkinter
 
 #window
-window = tkinter.Tk()
+window = customtkinter.CTk()
 window.title('BMI Calculator')
 window.config(bg='snow3')
 window.minsize(300, 150)
@@ -13,7 +14,7 @@ weight_label.place(x=(window.winfo_width()/2)-(weight_label.winfo_reqwidth()/2),
                    y=(window.winfo_height())/2*0.2)
 
 #weight entry
-weight_entry = tkinter.Entry(width=20)
+weight_entry = customtkinter.CTkEntry(master=window, width=70)
 weight_entry.place(x=(window.winfo_width()/2) - (weight_entry.winfo_reqwidth()/2),
                    y=(window.winfo_height())/2*0.5)
 weight_entry.focus()
@@ -24,7 +25,7 @@ height_label.place(x=(window.winfo_width()/2) - (height_label.winfo_reqwidth()/2
                    y=(window.winfo_height())/2*0.8)
 
 #height entry
-height_entry = tkinter.Entry(width=20)
+height_entry = customtkinter.CTkEntry(master=window, width=70)
 height_entry.place(x=(window.winfo_width()/2) - (height_entry.winfo_reqwidth()/2),
                    y=(window.winfo_height())/2*1.1)
 
@@ -49,7 +50,7 @@ def button_func():
     info_label.place(x=(window.winfo_width() / 2) - (info_label.winfo_reqwidth() / 2),
                      y=(window.winfo_height()) / 2 * 1.7)
 
-calculate_button = tkinter.Button(text='Calculate', command=button_func)
+calculate_button = customtkinter.CTkButton(window, text='Calculate', command=button_func)
 calculate_button.place(x=(window.winfo_width()/2) - (calculate_button.winfo_reqwidth()/2),
                        y=(window.winfo_height())/2*1.4)
 
